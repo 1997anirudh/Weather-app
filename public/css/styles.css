@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #FFE5B4;
+}
+
+.form-signin {
+  width: 100%;
+
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin input[type="cityInput"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-primary{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 40%;
+  margin-right: 40%;
+
+  }
+.form-control{
+  background-color: lightblue ;
+  border-radius: 10px;
+  width: 100%;
+  height: 150%;
+}
+label{
+  font-family: fantasy;
+  font-size: 18px
+}

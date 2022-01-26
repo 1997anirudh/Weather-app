@@ -4,7 +4,7 @@ const bodyParser = require("body-parser")
 const https = require("https");
 
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.use(express.static("public"))
 
 app.get("/", function(request,response){
   response.sendFile(__dirname +"/index.html")
@@ -24,16 +24,17 @@ app.post("/", function(request,response){
       const icon = weatherData.weather[0].icon
       imageurl = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
       // console.log(desc);
+
       response.write("<h1>Temperature in "+query + " is "+ temp+ " degree Celcius</h1>");
       response.write("<h3>The weather conditions is "+ desc+ " </h3>");
       response.write("<img src = " + imageurl +">");
-      response.send()
+
     })
   });
 });
 })
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("Starting server")
 });
